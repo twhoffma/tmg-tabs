@@ -7,6 +7,8 @@ Keep only listening to The Mountain Goats (and friends).
 ### AWK
 'BEGIN {FS = "\]\]"} $0 ~ /\[\[tabs\:[^\]]+?/ {printf "%s\n", $1}'
 
+Then use system() to run wget ozw.
+
 ### SED
 -rn 's/\[\[(tabs:[^]]+?)\]\]/\1/p'
 
